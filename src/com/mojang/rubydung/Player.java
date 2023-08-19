@@ -31,8 +31,8 @@ public class Player {
         float var1 = (float)Math.random() * (float)this.level.width;
         float var2 = (float)(this.level.depth - 10);
         float var3 = (float)Math.random() * (float)this.level.height;
-      this.setPos(var1, var2, var3);
-   }
+        this.setPos(var1, var2, var3);
+    }
     
     private void setPos(final float x, final float y, final float z) {
         this.x = x;
