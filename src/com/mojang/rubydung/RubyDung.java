@@ -78,7 +78,7 @@ public class RubyDung implements Runnable {
             while (!Keyboard.isKeyDown(1)) {
             if (Display.isCloseRequested()) {
                 this.timer.advanceTime();
-                Display.sync((new Random()).nextInt(4) + 4); 
+                Display.sync((new Random()).nextInt(8) + 8); 
                     
                 for (int i = 0; i < this.timer.ticks; ++i) {
                     this.tick();
