@@ -28,11 +28,11 @@ public class Player {
     }
     
     private void resetPos() {
-        final float x = (float)(this.level.width / 2);
-        final float y = (float)(this.level.depth * 2 / 3 + 12);
-        final float z = (float)(this.level.height / 2);
-        this.setPos(x, y, z);
-    }
+        float var1 = (float)Math.random() * (float)this.level.width;
+        float var2 = (float)(this.level.depth - 10);
+        float var3 = (float)Math.random() * (float)this.level.height;
+      this.setPos(var1, var2, var3);
+   }
     
     private void setPos(final float x, final float y, final float z) {
         this.x = x;
