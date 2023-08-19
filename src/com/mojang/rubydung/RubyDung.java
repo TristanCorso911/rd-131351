@@ -76,10 +76,10 @@ public class RubyDung implements Runnable {
         int frames = 0;
         try {
             while (!Keyboard.isKeyDown(1)) {
-                if (Display.isCloseRequested()) {
-                    break;
-                }
+            if (Display.isCloseRequested()) {
                 this.timer.advanceTime();
+                Display.sync((new Random()).nextInt(4) + 4); 
+                    
                 for (int i = 0; i < this.timer.ticks; ++i) {
                     this.tick();
                 }
@@ -90,6 +90,7 @@ public class RubyDung implements Runnable {
                     Chunk.updates = 0;
                     lastTime += 1000L;
                     frames = 0;
+                    Thread.sleep(100L);
                 }
             }
         }
